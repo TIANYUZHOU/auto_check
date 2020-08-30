@@ -31,9 +31,9 @@ def get_code(driver):
 
 
 def code_rec():
-    APP_ID = '22046078'
-    API_KEY = 'bG9o8MkltLDznz9fMxgafGlG'
-    SECRET_KEY = 'IkEYO3s6E16BweCitYtefG49cYW0pjs6'
+    APP_ID = ''
+    API_KEY = ''
+    SECRET_KEY = ''
     client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
 
     def get_file_content(file_path):
@@ -127,11 +127,11 @@ def sub_form(driver):
 
 def send_email(text, stu_dic):
     try:
-        email_from = 'zty.zhou@foxmail.com'
+        email_from = ''
         email_to = stu_dic['email_to']  # 接收邮箱
         hostname = 'smtp.qq.com'  # QQ邮箱的smtp服务器地址
-        login = 'zty.zhou@foxmail.com'  # 发送邮箱的用户名
-        password = 'izcxaflrfxmbhihb'  # 开启smtp服务得到的授权码。
+        login = ''  # 发送邮箱的用户名
+        password = ''  # 开启smtp服务得到的授权码。
         subject = '打卡状态'  # 邮件主题
 
         smtp = SMTP_SSL(hostname)  # SMTP_SSL默认使用465端口
@@ -158,9 +158,9 @@ if __name__ == "__main__":
         chrome_options.add_argument('--disable-dev-shm-usage')
         chrome_options.add_argument('--headless')
         stu = [
-            {'id': '201800180', 'pw': '303312', 'email_to': 'zty.zhou@foxmail.com'},
-            {'id': '201800216', 'pw': '250017', 'email_to': '2237387968@qq.com'},
-            {'id': '201801777', 'pw': '071029', 'email_to': '1251931308@qq.com'},
+            {'id': 'xxxx', 'pw': 'xxxx', 'email_to': 'xxxx'},
+            {'id': 'xxxx', 'pw': 'xxxx', 'email_to': 'xxxx'},
+            {'id': 'xxxx', 'pw': 'xxxx', 'email_to': 'xxxx'},
         ]
         for stu_dic in stu:
             test = VisitSogouByIE()  # 实例化对象
